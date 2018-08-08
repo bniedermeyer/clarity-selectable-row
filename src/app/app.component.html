@@ -1,20 +1,41 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div style="max-width: 900px; padding: 20px;">
+  <h2>Table with clDgRowSelection</h2>
+  <clr-datagrid [(clrDgSelected)]="selected" [clDgRowSelection]="true">
+    <clr-dg-column>Val 1</clr-dg-column>
+    <clr-dg-column>Val 2</clr-dg-column>
+    <clr-dg-column>Val 3</clr-dg-column>
+    <clr-dg-column>Val 4</clr-dg-column>
+    <clr-dg-column>Val 5</clr-dg-column>
+    <clr-dg-column>Val 6</clr-dg-column>
 
+
+    <clr-dg-row *clrDgItems="let item of items" [clrDgItem]="item">
+      <clr-dg-cell>{{item.val1}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val2}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val3}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val4}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val5}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val6}}</clr-dg-cell>
+    </clr-dg-row>
+  </clr-datagrid>
+
+  <h2>Table without clDgRowSelection</h2>
+  <clr-datagrid [(clrDgSelected)]="selected2">
+    <clr-dg-column>Val 1</clr-dg-column>
+    <clr-dg-column>Val 2</clr-dg-column>
+    <clr-dg-column>Val 3</clr-dg-column>
+    <clr-dg-column>Val 4</clr-dg-column>
+    <clr-dg-column>Val 5</clr-dg-column>
+    <clr-dg-column>Val 6</clr-dg-column>
+
+
+    <clr-dg-row *clrDgItems="let item of items" [clrDgItem]="item">
+      <clr-dg-cell>{{item.val1}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val2}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val3}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val4}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val5}}</clr-dg-cell>
+      <clr-dg-cell>{{item.val6}}</clr-dg-cell>
+    </clr-dg-row>
+  </clr-datagrid>
+</div>
